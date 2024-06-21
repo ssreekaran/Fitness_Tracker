@@ -14,8 +14,8 @@
   <link rel="stylesheet" href="style.css">
 
 </head>
-<body style="height: 1500px">
-  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+<body data-bs-theme="light" style="height: 1500px">
+  <div class="bgimg w3-display-container w3-animate-opacity">
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-md navbar-light bg-transparent">
       <div class="container">
@@ -42,13 +42,13 @@
           id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a href="index.html" class="nav-link text-white">
+              <a href="index.html" class="nav-link">
                 Home
               </a>
             </li>
             <li class="nav-item dropdown">
               <a 
-                class="nav-link text-white dropdown-toggle" 
+                class="nav-link dropdown-toggle" 
                 id="navbarDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -62,7 +62,7 @@
             </li>
             <li class="nav-item dropdown">
               <a 
-                class="nav-link text-white dropdown-toggle" 
+                class="nav-link dropdown-toggle" 
                 id="navbarDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -78,7 +78,7 @@
             </li>
             <li class="nav-item dropdown">
               <a 
-                class="nav-link text-white dropdown-toggle" 
+                class="nav-link dropdown-toggle" 
                 id="navbarDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -92,7 +92,7 @@
             </li>
             <li class="nav-item">
               <!-- Currently disabled -->
-              <a href="index.html" class="nav-link text-white disabled">
+              <a href="index.html" class="nav-link disabled">
                 Login
               </a>
             </li>
@@ -102,8 +102,30 @@
             <input type="text" class="form-control me-2">
             <button type="submit" class="btn btn-primary">Search</button>
         </form>
+        <div class="flex-container">
+        <img 
+        src="images/sun.png" class="rounded float-end" alt="light" width= 25 height= 25/>
+        <div class="form-check form-switch" >
+          <input
+            class="form-check-input p-2"
+            type="checkbox"
+            role="switch"
+            id="flexSwitchCheckDefault"
+            onclick="lightToggle()"
+          />
+        </div>
+        <img 
+        src="images/moon.png" alt="dark" width= 25 height= 25 />
       </div>
+    </div>
     </nav>
   </div>
+  <script>
+    function lightToggle() {
+      var element = document.body;
+      element.dataset.bsTheme =
+        element.dataset.bsTheme == "light" ? "dark" : "light";
+    }
+  </script>
 </body>
 </html>
