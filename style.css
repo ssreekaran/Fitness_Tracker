@@ -1,0 +1,19 @@
+body,h1 {font-family: "Raleway", sans-serif}
+  body, html {
+    height: 100%;
+  }
+
+.navbar-nav{
+  text-align: right;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+
+.flex-container > div {
+  margin: 7px;
+}
